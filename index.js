@@ -5,6 +5,7 @@ const Product = require('./models/product.model.js');
 
 
 app.use(express.json());
+app.use(express.urlencoded({extended:false}));
 
 
 app.get('/api/product/:id', async (req, res) => {
